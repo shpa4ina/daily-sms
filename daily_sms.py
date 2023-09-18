@@ -255,6 +255,7 @@ list_yesterday = datetime.datetime.strftime(yesterday, '%d %m %y').split()
 
 vdc_count_2_0 = input("Введите кол-во VDC в Public IaaS 2.0: ")
 vdc_count_3_0 = input("Введите кол-во VDC в Public IaaS 3.0: ")
+vdc_count_66 = input("Введите кол-во VDC в IaaS66: ")
 
 
 resault_str = f"""Ежедневный отчёт за 24 часа
@@ -318,7 +319,6 @@ Tier-4: {round((dict_2_0.get("Cloud-Tier-4")[0] + dict_3_0.get("c01-cl02-Tier-4"
 """
 
 if iaas66 == True:
-    vdc_count_66 = input("Введите кол-во VDC в IaaS66: ")
     Tier_1_66 = input("Введите значение Tier-1 в IaaS66 в формате XX.X / XXX (XX.XX%): ")
 
     resault_str = resault_str + f""" 
