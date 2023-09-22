@@ -161,7 +161,6 @@ def get_pvdc_info(client):
         pvdc_mem_allocation = round(int(pvdc_mem["allocation"]) / 1048576, 2)
         pvdc_mem_used_procents = round((pvdc_mem_allocation / pvdc_mem_total) * 100, 2)
 
-
         # наполняю словарь dict_2_0 параметрами относязимися к кластеру 2.0
         # print("pvdcs.get(name): ", pvdcs.get("name"))
         if "2.0" in pvdcs.get("name"):
