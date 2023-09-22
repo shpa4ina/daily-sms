@@ -126,9 +126,8 @@ def get_pvdc_info(client):
         # storage_prov = storage.get("storageProvisionedMB")
         # до проверка, на случай если сторедж пуской( как в DEV)
         if int(storage_total) > 0:
-            stor_tiers[storage_name] = round(int(storage_req) / 1048576, 2), round((int(storage_total) / 1048576), 2)
-            stor_tiers_used[storage_name] = round(int(storage_used) / 1048576, 2), round((int(storage_total) / 1048576),
-                                                                                         2)
+            stor_tiers[storage_name] = round(int(storage_req) / 1048576, 2), round((int(storage_total) / 1048576), 2) # используем этот словарь если значение используемого места для Tier берется из Requested
+            stor_tiers_used[storage_name] = round(int(storage_used) / 1048576, 2), round((int(storage_total) / 1048576), 2) # берется из Used
             # print(storage_name)
             # print(storage_total)
             # print(storage_used)
@@ -176,7 +175,6 @@ def get_pvdc_info(client):
             dict_2_0["pvdc_cpu_allocation"] = pvdc_cpu_allocation
             dict_2_0["pvdc_cpu_total"] = pvdc_cpu_total
             dict_2_0["pvdc_cpu_used_procents"] = pvdc_cpu_used_procents
-            # dict_2_0["count_vdcs"] = count_vdcs
             print("\n", "Получение данных по 2.0 кластеру :\n", dict_2_0, "\n\n")
         # наполняю словарь dict_3_0 параметрами относязимися к кластеру 3.0
         if "3.0" in pvdcs.get("name"):
@@ -195,9 +193,9 @@ def get_pvdc_info(client):
         # в качестве теста, хост можно подкинуть dev вместо vmw66
         if "Security Cloud" in pvdcs.get("name"):
             dict_66_0["Tier-1"] = stor_tiers["Tier-1"]
-            dict_66_0["Tier-2"] = stor_tiers_used["Tier-2"]
-            dict_66_0["Tier-3"] = stor_tiers_used["Tier-3"]
-            dict_66_0["Tier-4"] = stor_tiers_used["Tier-4"]
+            dict_66_0["Tier-2"] = stor_tiers["Tier-2"]
+            dict_66_0["Tier-3"] = stor_tiers["Tier-3"]
+            dict_66_0["Tier-4"] = stor_tiers["Tier-4"]
             dict_66_0["pvdc_mem_total"] = pvdc_mem_total
             dict_66_0["pvdc_mem_allocation"] = pvdc_mem_allocation
             dict_66_0["pvdc_mem_used_procents"] = pvdc_mem_used_procents
