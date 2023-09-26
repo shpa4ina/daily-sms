@@ -309,10 +309,6 @@ Tier-3: {round((dict_2_0.get("Cloud-Tier-3")[0] + dict_3_0.get("c01-cl02-Tier-3"
 Storage Huawei 5500
 ----------------------
 Tier-4: {round((dict_2_0.get("Cloud-Tier-4")[0] + dict_3_0.get("c01-cl02-Tier-4")[0]), 2)} / 503.8 ({round((dict_2_0.get("Cloud-Tier-4")[0] + dict_3_0.get("c01-cl02-Tier-4")[0]) * 100 / 503.8, 2)}%)
-======================
- #Инциденты
-======================
-Не зарегистрировано
 """
 
 if iaas66 == True:
