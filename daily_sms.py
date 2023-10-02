@@ -302,7 +302,7 @@ IaaS-66: {dict_66_0.get("pvdc_mem_allocation")} TB / {dict_66_0.get("pvdc_mem_to
 Huawei 18800
 ----------------------
 Tier-1: {round((dict_2_0.get("Cloud-Tier-1")[0] + dict_3_0.get("c01-cl02-Tier-1")[0]), 2)} ({round((dict_2_0.get("Cloud-Tier-1")[0] + dict_3_0.get("c01-cl02-Tier-1")[0]) * 100 / 531, 2)}%)
-Tier-2: {(dict_2_0.get("Cloud-Tier-2")[0] + dict_3_0.get("c01-cl02-Tier-2")[0])} ({round((dict_2_0.get("Cloud-Tier-2")[0] + dict_3_0.get("c01-cl02-Tier-2")[0]) * 100 / 531, 2)}%)
+Tier-2: {round((dict_2_0.get("Cloud-Tier-2")[0] + dict_3_0.get("c01-cl02-Tier-2")[0]), 2)} ({round((dict_2_0.get("Cloud-Tier-2")[0] + dict_3_0.get("c01-cl02-Tier-2")[0]) * 100 / 531, 2)}%)
 Tier-3: {round((dict_2_0.get("Cloud-Tier-3")[0] + dict_3_0.get("c01-cl02-Tier-3")[0]), 2)} ({round((dict_2_0.get("Cloud-Tier-3")[0] + dict_3_0.get("c01-cl02-Tier-3")[0]) * 100 / 531, 2)}%)
 ИТОГО: {round(((dict_2_0.get("Cloud-Tier-1")[0] + dict_3_0.get("c01-cl02-Tier-1")[0]) + (dict_2_0.get("Cloud-Tier-2")[0] + dict_3_0.get("c01-cl02-Tier-2")[0]) + (dict_2_0.get("Cloud-Tier-3")[0] + dict_3_0.get("c01-cl02-Tier-3")[0])), 2)} / 531 ({round(((dict_2_0.get("Cloud-Tier-1")[0] + dict_3_0.get("c01-cl02-Tier-1")[0]) + (dict_2_0.get("Cloud-Tier-2")[0] + dict_3_0.get("c01-cl02-Tier-2")[0]) + (dict_2_0.get("Cloud-Tier-3")[0] + dict_3_0.get("c01-cl02-Tier-3")[0])) / 5.31, 2)}%)
 ----------------------
